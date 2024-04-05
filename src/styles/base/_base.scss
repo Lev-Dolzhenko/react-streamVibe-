@@ -1,0 +1,78 @@
+body {
+  font-family: $manrope;
+  font-size: 16px;
+  overflow-x: hidden !important;
+  background: $colorBg;
+  color: $colorWhite;
+}
+
+a {
+  transition: color 0.2s linear;
+
+  &:hover {
+    // color: $fff;
+  }
+}
+
+.none {
+  display: none !important;
+}
+
+.container {
+  max-width: 1630px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 4px;
+  padding: 15px 24px;
+  border-radius: 8px;
+
+  transition: transform 0.1s linear;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+.subtitle {
+  color: $colorGrey-60;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.title1 {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 150%;
+  text-align: center;
+}
+
+.title2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.title3 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.title4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+
+  &_plan {
+    font-weight: 700;
+  }
+}

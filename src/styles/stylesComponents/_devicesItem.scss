@@ -1,0 +1,33 @@
+.devices__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 12px;
+
+  padding: 50px;
+
+  background: linear-gradient(
+      229.83deg,
+      rgba(229, 0, 0, 0.5) -224.857%,
+      rgba(229, 0, 0, 0) 38.387%
+    ),
+    rgb(15, 15, 15);
+}
+
+.devices__item_top {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  img {
+    box-sizing: border-box;
+    border: 1px solid $colorBlack-12;
+    border-radius: 12px;
+    background: $colorBlack-08;
+
+    padding: 16px;
+  }
+}

@@ -1,0 +1,31 @@
+.plan__item {
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 12px;
+  background: $colorBlack-10;
+
+  padding: 50px;
+}
+.plan__item_title {
+  margin-bottom: 16px;
+}
+.plan__item_subtitle {
+  margin-bottom: 50px;
+}
+.plan__item_price {
+  font-size: 40px;
+  font-weight: 600;
+
+  margin-bottom: 50px;
+}
+.plan__item_period {
+  color: $colorGrey-60;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 73%;
+}
+.plan__item_buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}

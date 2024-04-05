@@ -1,0 +1,32 @@
+//base
+
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+@import "./base/animations";
+@import "./base/mixins";
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+
+//*base
+
+//components
+
+@import "./stylesComponents/headerNav";
+@import "./stylesComponents/buttonAccent";
+@import "./stylesComponents/buttonMuted";
+@import "./stylesComponents/devicesItem";
+@import "./stylesComponents/planItem";
+@import "./stylesComponents/footerColumns";
+@import "./stylesComponents/footerColumnIcons";
+
+//*components
+
+//sections
+
+@import "./styleSections/header";
+@import "./styleSections/devices";
+@import "./styleSections/plan";
+@import "./styleSections/trial";
+@import "./styleSections/footer";
+
+//*sections

@@ -1,0 +1,35 @@
+.trial {
+  margin-top: 150px;
+}
+.trial__wrapper {
+  position: relative;
+  border-radius: 12px;
+
+  padding: 100px 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trial__wrapper_background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  border-radius: 12px;
+
+  z-index: -2;
+}
+.trial__wrapper_fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  border-radius: 12px;
+
+  z-index: -1;
+}

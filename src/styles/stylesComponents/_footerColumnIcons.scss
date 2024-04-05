@@ -1,0 +1,25 @@
+.footer__list_icons {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+
+  margin-top: 14px;
+}
+
+.footer__list_icon {
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 8px;
+  background: $colorBlack-10;
+
+  padding: 16px;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,72 @@
+.plan {
+  margin-top: 150px;
+}
+
+.plan__text {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 80px;
+}
+.plan__text_top {
+  margin-bottom: 14px;
+}
+.plan__text_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.plan__text_toggler {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 10px;
+  background: $colorBlack-06;
+
+  padding: 10px;
+}
+.plan__text_toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 24px;
+
+  border-radius: 10px;
+
+  color: $colorGrey-60;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+
+  &:hover {
+    background: $colorBlack-12;
+    color: $colorWhite;
+  }
+}
+.plan__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.plan__grid_year {
+  position: absolute;
+  left: 0;
+  top: -100%;
+}
+.plan__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 30px;
+}
+.plan__text_toggle-button-active {
+  background: $colorBlack-12;
+  color: $colorWhite;
+}
+.showSecondPlan {
+  animation: showSecondPlan 0.4s ease-out forwards;
+}
+.hideSecondPlan {
+  animation: hideSecondPlan 0.4s ease-out forwards;
+}

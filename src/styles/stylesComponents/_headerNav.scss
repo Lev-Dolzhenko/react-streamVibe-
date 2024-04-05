@@ -1,0 +1,33 @@
+.header__nav {
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  padding: 10px;
+
+  border: 4px solid $colorBlack-12;
+  border-radius: 12px;
+  background: $colorBlack-06;
+
+  width: fit-content;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: $colorGrey-75;
+
+  border-radius: 8px;
+
+  padding: 14px 24px;
+
+  &:hover {
+    background: $colorBlack-10;
+    color: $colorWhite;
+  }
+}

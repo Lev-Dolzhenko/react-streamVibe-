@@ -1,0 +1,18 @@
+.devices {
+  margin-top: 150px;
+}
+.devices__text {
+  max-width: 1300px;
+
+  margin-bottom: 80px;
+}
+
+.devices__title {
+  margin-bottom: 14px;
+}
+
+.devices__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
