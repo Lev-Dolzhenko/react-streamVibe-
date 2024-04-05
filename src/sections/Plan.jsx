@@ -17,7 +17,7 @@ const Plan = () => {
       <div className="container">
         <div className="plan__text">
           <div className="plan__text_top">
-            <div className="plan__text_title3">
+            <div className="plan__text_title">
               <h3 className="title3">Choose the plan that's right for you</h3>
             </div>
           </div>

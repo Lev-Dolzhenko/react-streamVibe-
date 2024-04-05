@@ -1,21 +1,22 @@
 .plan {
-  margin-top: 150px;
+  margin-top: clamp(80px, 3.885rem + 4.58vw, 150px);
 }
 
 .plan__text {
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 80px;
+  margin-bottom: clamp(40px, 1.863rem + 2.61vw, 80px);
 }
 .plan__text_top {
-  margin-bottom: 14px;
+  margin-bottom: clamp(8px, 0.404rem + 0.39vw, 14px);
 }
 .plan__text_bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .plan__text_toggler {
   display: flex;
   align-items: center;
@@ -24,19 +25,20 @@
   border-radius: 10px;
   background: $colorBlack-06;
 
-  padding: 10px;
+  padding: clamp(8px, 0.468rem + 0.13vw, 10px);
 }
 .plan__text_toggle-button {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 14px 24px;
+  padding: clamp(12px, 0.718rem + 0.13vw, 14px)
+    clamp(20px, 1.186rem + 0.26vw, 24px);
 
   border-radius: 10px;
 
   color: $colorGrey-60;
-  font-size: 18px;
+  font-size: clamp(14px, 0.811rem + 0.26vw, 18px);
   font-weight: 500;
   line-height: 150%;
 
@@ -58,7 +60,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  gap: 30px;
+  gap: clamp(20px, 1.091rem + 0.65vw, 30px);
 }
 .plan__text_toggle-button-active {
   background: $colorBlack-12;
@@ -69,4 +71,17 @@
 }
 .hideSecondPlan {
   animation: hideSecondPlan 0.4s ease-out forwards;
+}
+
+@media screen and (max-width: 1250px) {
+  .plan__grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+
+  .plan__text_bottom {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 20px;
+  }
 }

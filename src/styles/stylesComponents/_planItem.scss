@@ -4,28 +4,30 @@
   border-radius: 12px;
   background: $colorBlack-10;
 
-  padding: 50px;
+  width: 100%;
+
+  padding: clamp(24px, 1.086rem + 1.7vw, 50px);
 }
 .plan__item_title {
-  margin-bottom: 16px;
+  margin-bottom: clamp(10px, 0.529rem + 0.39vw, 16px);
 }
 .plan__item_subtitle {
-  margin-bottom: 50px;
+  margin-bottom: clamp(30px, 1.556rem + 1.31vw, 50px);
 }
 .plan__item_price {
-  font-size: 40px;
+  font-size: clamp(24px, 1.245rem + 1.05vw, 40px);
   font-weight: 600;
 
-  margin-bottom: 50px;
+  margin-bottom: clamp(30px, 1.556rem + 1.31vw, 50px);
 }
 .plan__item_period {
   color: $colorGrey-60;
-  font-size: 18px;
+  font-size: clamp(14px, 0.811rem + 0.26vw, 18px);
   font-weight: 500;
   line-height: 73%;
 }
 .plan__item_buttons {
   display: flex;
   align-items: center;
-  column-gap: 20px;
+  column-gap: clamp(12px, 0.623rem + 0.52vw, 20px);
 }

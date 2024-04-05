@@ -1,11 +1,12 @@
 .trial {
-  margin-top: 150px;
+  margin-top: clamp(80px, 3.885rem + 4.58vw, 150px);
 }
 .trial__wrapper {
   position: relative;
   border-radius: 12px;
 
-  padding: 100px 80px;
+  padding: clamp(50px, 2.328rem + 3.27vw, 100px)
+    clamp(30px, 1.078rem + 3.27vw, 80px);
 
   display: flex;
   align-items: center;
@@ -17,6 +18,9 @@
   right: 0;
   top: 0;
   bottom: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 
   border-radius: 12px;
 
@@ -28,8 +32,20 @@
   right: 0;
   top: 0;
   bottom: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 
   border-radius: 12px;
 
   z-index: -1;
+}
+@media screen and (max-width: 1200px) {
+  .trial__wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    row-gap: 10px;
+  }
 }

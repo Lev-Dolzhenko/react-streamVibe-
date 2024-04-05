@@ -9,6 +9,7 @@ import fadeTop from "../images/bgFadeTop.png";
 import fadeBottom from "../images/bgFadeBottom.png";
 import logotypeBig from "../images/logotypeBig.png";
 import playIcon from "../images/playIcon.svg";
+import burgerIcon from "../images/iconBurger.svg";
 
 //components
 import HeaderNav from "../components/HeaderNav";
@@ -31,6 +32,9 @@ const Header = () => {
               <img src={notificationIcon} alt="notification icon" />
             </button>
           </div>
+          <button className="header__button_burger">
+            <img src={burgerIcon} alt="burgerIcon" />
+          </button>
         </div>
         <div className="header__hero">
           <div className="header__hero_img">
@@ -49,8 +53,14 @@ const Header = () => {
               the content you want to watch.
             </p>
           </div>
+          <div className="header__hero_subtitle header__hero_subtitle-short">
+            <p className="subtitle">
+              StreamVibe is the best streaming experience for watching your
+              favorite movies and shows on demand, anytime, anywhere.
+            </p>
+          </div>
           <div className="header__hero_button">
-            <ButtonAccent icon={playIcon} text={"Start Watching Now"}/>
+            <ButtonAccent icon={playIcon} text={"Start Watching Now"} />
           </div>
         </div>
       </div>

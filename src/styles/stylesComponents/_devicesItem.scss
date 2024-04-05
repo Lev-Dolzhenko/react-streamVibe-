@@ -1,13 +1,13 @@
 .devices__item {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: clamp(20px, 1.091rem + 0.65vw, 30px);
 
   box-sizing: border-box;
   border: 1px solid $colorBlack-15;
   border-radius: 12px;
 
-  padding: 50px;
+  padding: clamp(24px, 1.086rem + 1.7vw, 50px);
 
   background: linear-gradient(
       229.83deg,
@@ -28,6 +28,6 @@
     border-radius: 12px;
     background: $colorBlack-08;
 
-    padding: 16px;
+    padding: clamp(10px, 0.529rem + 0.39vw, 16px);
   }
 }

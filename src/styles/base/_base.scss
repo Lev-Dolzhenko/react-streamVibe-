@@ -33,6 +33,7 @@ a {
   column-gap: 4px;
   padding: 15px 24px;
   border-radius: 8px;
+  font-size: clamp(14px, 0.843rem + 0.13vw, 16px);
 
   transition: transform 0.1s linear;
 
@@ -43,32 +44,32 @@ a {
 
 .subtitle {
   color: $colorGrey-60;
-  font-size: 18px;
+  font-size: clamp(14px, 0.811rem + 0.26vw, 18px);
   font-weight: 400;
   line-height: 150%;
 }
 
 .title1 {
-  font-size: 58px;
+  font-size: clamp(28px, 1.272rem + 1.96vw, 58px);
   font-weight: 700;
   line-height: 150%;
   text-align: center;
 }
 
 .title2 {
-  font-size: 48px;
+  font-size: clamp(24px, 1.118rem + 1.57vw, 48px);
   font-weight: 700;
   line-height: 150%;
 }
 
 .title3 {
-  font-size: 38px;
+  font-size: clamp(24px, 1.277rem + 0.92vw, 38px);
   font-weight: 700;
   line-height: 150%;
 }
 
 .title4 {
-  font-size: 24px;
+  font-size: clamp(18px, 1.029rem + 0.39vw, 24px);
   font-weight: 600;
   line-height: 150%;
 

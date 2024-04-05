@@ -4,15 +4,27 @@
 .devices__text {
   max-width: 1300px;
 
-  margin-bottom: 80px;
+  margin-bottom: clamp(40px, 1.863rem + 2.61vw, 80px);
 }
 
 .devices__title {
-  margin-bottom: 14px;
+  margin-bottom: clamp(8px, 0.404rem + 0.39vw, 14px);
 }
 
 .devices__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: clamp(20px, 1.091rem + 0.65vw, 30px);
+}
+
+@media screen and (max-width: 1200px) {
+  .devices__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .devices__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
