@@ -1,0 +1,28 @@
+.swiperBig {
+  margin-top: 50px;
+  margin-bottom: 180px;
+}
+.container_swiperBig {
+  position: relative;
+}
+.big__wrapper_buttons {
+  background: unset;
+  border-radius: unset;
+  border: unset;
+  column-gap: unset;
+  padding: unset;
+
+  justify-content: space-between;
+  width: 95%;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  // left: 20px;
+  // right: 20px;
+
+  position: absolute;
+  bottom: 20px;
+
+  z-index: 2;
+}

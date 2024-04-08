@@ -42,6 +42,51 @@ a {
   }
 }
 
+.common__wrapper_buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 100px;
+
+  width: fit-content;
+  height: fit-content;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-12;
+  border-radius: 12px;
+  background: $colorBlack-06;
+}
+
+.common__wrapper_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-12;
+  border-radius: 8px;
+  background: $colorBlack-10;
+
+  padding: 14px;
+}
+
+.wrapper__movies {
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+
+  padding: 50px;
+}
+
+.genres_movies {
+  margin-top: unset !important;
+}
+
 .subtitle {
   color: $colorGrey-60;
   font-size: clamp(14px, 0.811rem + 0.26vw, 18px);

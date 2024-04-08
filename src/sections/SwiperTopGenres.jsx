@@ -4,9 +4,9 @@ import React, { useRef } from "react";
 import SwiperGenresItem from "../components/SwiperGenresItem";
 
 //images
-import tempImage from "../images/imageForGenreItemTemp.jpeg";
 import swiperButtonPrev from "../images/swiperButtonPrev.svg";
 import swiperButtonNext from "../images/swiperButtonNext.svg";
+import tempImage from "../images/imageForGenreItemTemp.jpeg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-const SwiperGenres = ({ title, subtitle }) => {
+const SwiperTopGenres = () => {
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -30,24 +30,19 @@ const SwiperGenres = ({ title, subtitle }) => {
   };
 
   return (
-    <section className="genres genres_movies">
+    <sectiom className="topGenres">
       <div className="container">
-        <div className="genres__wrapper">
-          <div className="genres__wrapper_text">
-            <div className="genres__text_title">
-              <h3 className="title3">{title}</h3>
+        <div className="topGenres__wrapper">
+          <div className="topGenres__wrapper_text">
+            <div className="topGenres__text_title">
+              <h3 className="title3">Popular Top 10 In Genres</h3>
             </div>
-            {subtitle && (
-              <div className="genres__text_subtitle">
-                <p className="subtitle">{subtitle}</p>
-              </div>
-            )}
           </div>
-          <div className="common__wrapper_buttons genres__wrapper_buttons">
-            <button onClick={goPrev} className="common__wrapper_button genres__wrapper_button">
+          <div className="common__wrapper_buttons ">
+            <button onClick={goPrev} className="common__wrapper_button">
               <img src={swiperButtonPrev} alt="swiperButtonPrev" />
             </button>
-            <button onClick={goNext} className="common__wrapper_button genres__wrapper_button">
+            <button onClick={goNext} className="common__wrapper_button">
               <img src={swiperButtonNext} alt="swiperButtonNext" />
             </button>
           </div>
@@ -71,52 +66,55 @@ const SwiperGenres = ({ title, subtitle }) => {
               slidesPerView: 4,
               spaceBetween: 30,
             },
-            1440: {
-              slidesPerView: 5,
-              spaceBetween: 30,
-            },
           }}
         >
           <SwiperSlide>
             <SwiperGenresItem
+              isTop={true}
               genre={"Action"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
+              isTop={true}
+              genre={"Action"}
+              images={[tempImage, tempImage, tempImage, tempImage]}
+            />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SwiperGenresItem
+              isTop={true}
               genre={"Action"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
+              isTop={true}
               genre={"Action"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
+              isTop={true}
               genre={"Action"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
-              genre={"Action"}
-              images={[tempImage, tempImage, tempImage, tempImage]}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwiperGenresItem
+              isTop={true}
               genre={"Action"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
         </Swiper>
       </div>
-    </section>
+    </sectiom>
   );
 };
 
-export default SwiperGenres;
+export default SwiperTopGenres;

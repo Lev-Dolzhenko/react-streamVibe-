@@ -27,7 +27,9 @@
 
 .genres__item_wrapper {
   position: absolute;
-  align-self: center;
+
+
+  align-items: center;
   justify-content: space-between;
   width: 100%;
 
@@ -42,6 +44,9 @@
   display: flex;
 
   transition: all 0.2s linear;
+}
+.genres__item_wrapper_isTop {
+  align-items: end;
 }
 .genres__item_icon {
   height: 30px;
@@ -59,4 +64,19 @@
   bottom: 0;
   left: 0;
   top: 0;
+}
+
+.genres__item_wrapper_top {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+.genres__item_top {
+  padding: 5px;
+  border-radius: 5px;
+  background: $colorRed-45;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
 }

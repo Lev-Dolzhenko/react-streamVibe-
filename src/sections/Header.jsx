@@ -15,7 +15,7 @@ import burgerIcon from "../images/iconBurger.svg";
 import HeaderNav from "../components/HeaderNav";
 import ButtonAccent from "../components/ButtonAccent";
 
-const Header = () => {
+const Header = ({ isHero = true }) => {
   return (
     <header className="header">
       <div className="container">
@@ -36,37 +36,47 @@ const Header = () => {
             <img src={burgerIcon} alt="burgerIcon" />
           </button>
         </div>
-        <div className="header__hero">
-          <div className="header__hero_img">
-            <img src={logotypeBig} alt="logotypeBig" />
+        {isHero && (
+          <div className="header__hero">
+            <div className="header__hero_img">
+              <img src={logotypeBig} alt="logotypeBig" />
+            </div>
+            <div className="header__hero_title">
+              <h1 className="title1">The Best Streaming Experience</h1>
+            </div>
+            <div className="header__hero_subtitle">
+              <p className="subtitle">
+                StreamVibe is the best streaming experience for watching your
+                favorite movies and shows on demand, anytime, anywhere. With
+                StreamVibe, you can enjoy a wide variety of content, including
+                the latest blockbusters, classic movies, popular TV shows, and
+                more. You can also create your own watchlists, so you can easily
+                find the content you want to watch.
+              </p>
+            </div>
+            <div className="header__hero_subtitle header__hero_subtitle-short">
+              <p className="subtitle">
+                StreamVibe is the best streaming experience for watching your
+                favorite movies and shows on demand, anytime, anywhere.
+              </p>
+            </div>
+            <div className="header__hero_button">
+              <ButtonAccent icon={playIcon} text={"Start Watching Now"} />
+            </div>
           </div>
-          <div className="header__hero_title">
-            <h1 className="title1">The Best Streaming Experience</h1>
-          </div>
-          <div className="header__hero_subtitle">
-            <p className="subtitle">
-              StreamVibe is the best streaming experience for watching your
-              favorite movies and shows on demand, anytime, anywhere. With
-              StreamVibe, you can enjoy a wide variety of content, including the
-              latest blockbusters, classic movies, popular TV shows, and more.
-              You can also create your own watchlists, so you can easily find
-              the content you want to watch.
-            </p>
-          </div>
-          <div className="header__hero_subtitle header__hero_subtitle-short">
-            <p className="subtitle">
-              StreamVibe is the best streaming experience for watching your
-              favorite movies and shows on demand, anytime, anywhere.
-            </p>
-          </div>
-          <div className="header__hero_button">
-            <ButtonAccent icon={playIcon} text={"Start Watching Now"} />
-          </div>
-        </div>
+        )}
       </div>
-      <img className="header__background" src={bgHome} alt="bgHome" />
-      <img className="header__fade_top" src={fadeTop} alt="fadeTop" />
-      <img className="header__fade_bottom" src={fadeBottom} alt="fadeBottom" />
+      {isHero && (
+        <>
+          <img className="header__background" src={bgHome} alt="bgHome" />
+          <img className="header__fade_top" src={fadeTop} alt="fadeTop" />
+          <img
+            className="header__fade_bottom"
+            src={fadeBottom}
+            alt="fadeBottom"
+          />
+        </>
+      )}
     </header>
   );
 };
