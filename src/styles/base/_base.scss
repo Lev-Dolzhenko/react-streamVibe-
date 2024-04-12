@@ -72,6 +72,8 @@ a {
 }
 
 .wrapper__movies {
+  position: relative;
+
   box-sizing: border-box;
   border: 1px solid $colorBlack-15;
   border-radius: 12px;
@@ -81,6 +83,46 @@ a {
   row-gap: 100px;
 
   padding: 50px;
+
+  &::before {
+    position: absolute;
+    content: "Movies";
+    padding: 10px 24px;
+
+    left: 50px;
+    top: -20px;
+
+    background: $colorRed-45;
+    border-radius: 8px;
+  }
+}
+
+.wrapper__shows {
+  position: relative;
+
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+
+  padding: 50px;
+
+  margin-top: 150px;
+
+  &::before {
+    position: absolute;
+    content: "Shows";
+    padding: 10px 24px;
+
+    left: 50px;
+    top: -20px;
+
+    background: $colorRed-45;
+    border-radius: 8px;
+  }
 }
 
 .genres_movies {

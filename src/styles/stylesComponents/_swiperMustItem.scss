@@ -1,0 +1,42 @@
+.must {
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 12px;
+  background: $colorBlack-10;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.must__image {
+  height: 400px;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: 12px;
+  }
+}
+
+.must__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    box-sizing: border-box;
+    border: 1px solid $colorBlack-15;
+    border-radius: 51px;
+    background: $colorBlack-08;
+
+    padding: 6px 10px;
+
+    color: $colorGrey-60;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}

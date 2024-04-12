@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-const SwiperReleases = () => {
+const SwiperReleases = ({title, isShow, countsSlides}) => {
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -35,7 +35,7 @@ const SwiperReleases = () => {
         <div className="releases__wrapper">
           <div className="releases__wrapper_text">
             <div className="releases__text_title">
-              <h3 className="title3">New Releases</h3>
+              <h3 className="title3">{title}</h3>
             </div>
           </div>
           <div className="common__wrapper_buttons ">
@@ -63,7 +63,7 @@ const SwiperReleases = () => {
               spaceBetween: 20,
             },
             1200: {
-              slidesPerView: 5,
+              slidesPerView: countsSlides,
               spaceBetween: 30,
             },
           }}
@@ -73,6 +73,9 @@ const SwiperReleases = () => {
               image={tempImage}
               data={"Released at 22 April 2023"}
               name={"name"}
+              isShow={isShow}
+              seasons={4}
+              duration={"12h 33min"}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -80,6 +83,9 @@ const SwiperReleases = () => {
               image={tempImage}
               data={"Released at 22 April 2023"}
               name={"name"}
+              isShow={isShow}
+              seasons={4}
+              duration={"12h 33min"}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -87,6 +93,9 @@ const SwiperReleases = () => {
               image={tempImage}
               data={"Released at 22 April 2023"}
               name={"name"}
+              isShow={isShow}
+              seasons={4}
+              duration={"12h 33min"}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -94,6 +103,9 @@ const SwiperReleases = () => {
               image={tempImage}
               data={"Released at 22 April 2023"}
               name={"name"}
+              isShow={isShow}
+              seasons={4}
+              duration={"12h 33min"}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -101,6 +113,9 @@ const SwiperReleases = () => {
               image={tempImage}
               data={"Released at 22 April 2023"}
               name={"name"}
+              isShow={isShow}
+              seasons={4}
+              duration={"12h 33min"}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -108,6 +123,9 @@ const SwiperReleases = () => {
               image={tempImage}
               data={"Released at 22 April 2023"}
               name={"name"}
+              isShow={isShow}
+              seasons={4}
+              duration={"12h 33min"}
             />
           </SwiperSlide>
         </Swiper>

@@ -3,8 +3,16 @@ import React from "react";
 //images
 import durationIcon from "../images/durationIcon.svg";
 import countIcon from "../images/countIcon.svg";
+import seasonIcon from "../images/seasonIcon.svg";
 
-const SwiperTrendingItem = ({ image, duration, count, name }) => {
+const SwiperTrendingItem = ({
+  image,
+  duration,
+  count,
+  name,
+  isShow,
+  seasons,
+}) => {
   return (
     <div className="trending__item">
       <div className="trending__item_image_wrapper">
@@ -17,8 +25,17 @@ const SwiperTrendingItem = ({ image, duration, count, name }) => {
           {duration}
         </span>
         <span>
-          <img src={countIcon} alt="count Icon" />
-          {count}
+          {isShow ? (
+            <>
+              <img src={seasonIcon} alt="season Icon" />
+              {seasons} season
+            </>
+          ) : (
+            <>
+              <img src={countIcon} alt="count Icon" />
+              {count}
+            </>
+          )}
         </span>
       </div>
     </div>

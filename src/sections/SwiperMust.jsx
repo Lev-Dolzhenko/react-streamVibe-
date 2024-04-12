@@ -10,11 +10,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import SwiperMustItem from "../components/SwiperMustItem";
 
-//components
-import SwiperTrendingItem from "../components/SwiperTrendingItem";
-
-const SwiperTrending = ({ title, isShow, countsSlides }) => {
+const SwiperMust = () => {
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -32,10 +30,10 @@ const SwiperTrending = ({ title, isShow, countsSlides }) => {
   return (
     <sectiom className="trending">
       <div className="container">
-        <div className="trending__wrapper">
-          <div className="trending__wrapper_text">
-            <div className="trending__text_title">
-              <h3 className="title3">{title}</h3>
+        <div className="must__wrapper">
+          <div className="must__wrapper_text">
+            <div className="must__text_title">
+              <h3 className="title3">Must - Watch Movies</h3>
             </div>
           </div>
           <div className="common__wrapper_buttons ">
@@ -49,7 +47,7 @@ const SwiperTrending = ({ title, isShow, countsSlides }) => {
         </div>
         <Swiper
           loop={true}
-          spaceBetween={30}
+          spaceBetween={20}
           ref={swiperRef}
           className="mySwiper"
           slidesPerView={1.5}
@@ -63,79 +61,49 @@ const SwiperTrending = ({ title, isShow, countsSlides }) => {
               spaceBetween: 20,
             },
             1200: {
-              slidesPerView: countsSlides,
+              slidesPerView: 4,
               spaceBetween: 30,
             },
           }}
         >
           <SwiperSlide>
-            <SwiperTrendingItem
-              image={tempImage}
+            <SwiperMustItem
               duration={"1h 57min"}
-              count={"1.8k"}
-              name={"name"}
-              seasons={4}
-              isShow={isShow}
+              count={"20"}
+              stars={4}
+              image={tempImage}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <SwiperTrendingItem
-              image={tempImage}
+            <SwiperMustItem
               duration={"1h 57min"}
-              count={"1.8k"}
-              name={"name"}
-              seasons={4}
-              isShow={isShow}
+              count={"20"}
+              stars={4}
+              image={tempImage}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <SwiperTrendingItem
-              image={tempImage}
+            <SwiperMustItem
               duration={"1h 57min"}
-              count={"1.8k"}
-              name={"name"}
-              seasons={4}
-              isShow={isShow}
+              count={"20"}
+              stars={4}
+              image={tempImage}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <SwiperTrendingItem
-              image={tempImage}
+            <SwiperMustItem
               duration={"1h 57min"}
-              count={"1.8k"}
-              name={"name"}
-              seasons={4}
-              isShow={isShow}
+              count={"20"}
+              stars={4}
+              image={tempImage}
             />
           </SwiperSlide>
           <SwiperSlide>
-            <SwiperTrendingItem
-              image={tempImage}
+            <SwiperMustItem
               duration={"1h 57min"}
-              count={"1.8k"}
-              name={"name"}
-              seasons={4}
-              isShow={isShow}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwiperTrendingItem
+              count={"20"}
+              stars={4}
               image={tempImage}
-              duration={"1h 57min"}
-              count={"1.8k"}
-              name={"name"}
-              seasons={4}
-              isShow={isShow}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwiperTrendingItem
-              image={tempImage}
-              duration={"1h 57min"}
-              count={"1.8k"}
-              name={"name"}
-              seasons={4}
-              isShow={isShow}
             />
           </SwiperSlide>
         </Swiper>
@@ -144,4 +112,4 @@ const SwiperTrending = ({ title, isShow, countsSlides }) => {
   );
 };
 
-export default SwiperTrending;
+export default SwiperMust;

@@ -12,6 +12,7 @@
   img {
     height: 280px;
     border-radius: 12px;
+    width: 100%;
   }
 
   cursor: pointer;
@@ -31,7 +32,8 @@
 
   padding: 6px 10px;
 
-  font-size: 16px;
+  font-size: 12px;
+  color: $colorGrey-60;
   font-weight: 500;
   line-height: 150%;
   text-align: center;
@@ -62,4 +64,31 @@
   opacity: 0;
 
   transition: opacity 0.2s linear;
+}
+
+.releases__item_shows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 24px;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.releases__wrapper_shows {
+  padding: 6px 10px;
+
+  box-sizing: border-box;
+  border: 1px solid $colorBlack-15;
+  border-radius: 51px;
+  background: $colorBlack-08;
+
+  color: $colorGrey-60;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
 }

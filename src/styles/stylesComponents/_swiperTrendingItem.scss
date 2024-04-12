@@ -27,6 +27,10 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  
+  img {
+    width: 100%;
+  }
 }
 .trending__item_info {
   display: flex;
