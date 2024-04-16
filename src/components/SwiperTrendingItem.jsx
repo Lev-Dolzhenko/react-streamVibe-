@@ -19,7 +19,13 @@ const SwiperTrendingItem = ({
         <img src={image} alt={image} className="trending__item_image" />
         <span className="trending__item_name">{name}</span>
       </div>
-      <div className="trending__item_info">
+      <div
+        className={`${
+          isShow
+            ? "trending__item_info trending__item_info-shows"
+            : "trending__item_info"
+        }`}
+      >
         <span>
           <img src={durationIcon} alt="duration Icon" />
           {duration}

@@ -1,7 +1,7 @@
 .trending__item {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: clamp(12px, 0.089rem + 1.29vw, 20px);
 
   box-sizing: border-box;
   border: 1px solid $colorBlack-15;
@@ -10,11 +10,11 @@
 
   cursor: pointer;
 
-  padding: 20px;
+  padding: clamp(12px, 0.089rem + 1.29vw, 20px);
 
   .trending__item_image {
     border-radius: 12px;
-    height: 280px;
+    height: clamp(190px, 4.435rem + 14.52vw, 280px);
   }
 
   &:hover {
@@ -27,7 +27,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  
+
   img {
     width: 100%;
   }
@@ -41,7 +41,8 @@
     border-radius: 51px;
     background: $colorBlack-08;
 
-    padding: 6px 10px;
+    padding: clamp(4px, 0.085rem + 0.32vw, 6px)
+      clamp(4px, -0.246rem + 0.97vw, 10px);
 
     color: $colorGrey-60;
     font-size: 16px;
@@ -66,4 +67,19 @@
   opacity: 0;
 
   transition: opacity 0.2s linear;
+}
+
+@media screen and (max-width: 820px) {
+  .trending__item_info-shows {
+    flex-direction: column;
+    row-gap: 10px;
+
+    span {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 //components
 import SwiperGenresItem from "../components/SwiperGenresItem";
@@ -14,7 +14,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
+//axios
+import axios from "axios";
+
 const SwiperGenres = ({ title, subtitle }) => {
+  const [films, setFilms] = useState();
+  const [filmsPosters, setFilmsPosters] = useState([]);
+
+  const url = "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=20";
+  const headers = {
+    "X-API-KEY": "0G4PNZN-WQQ42Q4-NY9G8M7-9P4KZP1",
+  };
+
+  useEffect(() => {
+    axios
+      .get(url, { headers })
+      .then((response) => {
+        setFilms(response.data.docs);
+      })
+      .catch((error) => {
+        console.error("Ошибка при загрузке данных:", error.response?.data);
+      });
+  }, [url]);
+
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -28,6 +50,30 @@ const SwiperGenres = ({ title, subtitle }) => {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
+  const definitelyGenre = (genre) => {
+    for (let film of films) {
+      const genresArr = [];
+
+      const filmGenres = film.genres;
+
+      for (let filmGenre of filmGenres) {
+        genresArr.push(filmGenre.name);
+      }
+      const currGenre = film.genres[0].name;
+
+      genresArr.find((defGenre) => {
+        if (defGenre === genre) {
+          setFilmsPosters((prevPosters) => [...prevPosters, film.poster[0]])
+        };
+      });
+    }
+    console.log(FilmsPosters)
+  };
+
+  useEffect(() => {
+    // definitelyGenre("комедия");
+  }, []);
 
   return (
     <section className="genres genres_movies">
@@ -44,10 +90,16 @@ const SwiperGenres = ({ title, subtitle }) => {
             )}
           </div>
           <div className="common__wrapper_buttons genres__wrapper_buttons">
-            <button onClick={goPrev} className="common__wrapper_button genres__wrapper_button">
+            <button
+              onClick={goPrev}
+              className="common__wrapper_button genres__wrapper_button"
+            >
               <img src={swiperButtonPrev} alt="swiperButtonPrev" />
             </button>
-            <button onClick={goNext} className="common__wrapper_button genres__wrapper_button">
+            <button
+              onClick={goNext}
+              className="common__wrapper_button genres__wrapper_button"
+            >
               <img src={swiperButtonNext} alt="swiperButtonNext" />
             </button>
           </div>
@@ -85,31 +137,31 @@ const SwiperGenres = ({ title, subtitle }) => {
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
-              genre={"Action"}
+              genre={"Adventure"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
-              genre={"Action"}
+              genre={"Comedy"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
-              genre={"Action"}
+              genre={"Drama"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
-              genre={"Action"}
+              genre={"Horror"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>
           <SwiperSlide>
             <SwiperGenresItem
-              genre={"Action"}
+              genre={"Biography"}
               images={[tempImage, tempImage, tempImage, tempImage]}
             />
           </SwiperSlide>

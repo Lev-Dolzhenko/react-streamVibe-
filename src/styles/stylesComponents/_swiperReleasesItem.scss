@@ -1,5 +1,5 @@
 .releases__item {
-  padding: 20px;
+  padding: clamp(12px, 0.089rem + 1.29vw, 20px);
 
   box-sizing: border-box;
   border: 1px solid $colorBlack-15;
@@ -10,7 +10,7 @@
   flex-direction: column;
 
   img {
-    height: 280px;
+    height: clamp(190px, 4.435rem + 14.52vw, 280px);
     border-radius: 12px;
     width: 100%;
   }
@@ -38,7 +38,7 @@
   line-height: 150%;
   text-align: center;
 
-  margin-top: 26px;
+  margin-top: clamp(12px, -0.407rem + 2.26vw, 26px);
 }
 
 .releases__item_wrapper {
@@ -91,4 +91,18 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 150%;
+}
+
+@media screen and (max-width: 820px) {
+  .releases__item_shows {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .releases__wrapper_shows-show {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -1,5 +1,5 @@
 .swiperBig {
-  margin-top: 50px;
+  margin-top: clamp(40px, 2.268rem + 0.95vw, 50px);
   margin-bottom: 180px;
 }
 .container_swiperBig {
@@ -18,11 +18,17 @@
   left: 50%;
   transform: translateX(-50%);
 
-  // left: 20px;
-  // right: 20px;
+  padding: 0 20px;
+
 
   position: absolute;
   bottom: 20px;
 
   z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .big__wrapper_buttons {
+    display: none;
+  }
 }

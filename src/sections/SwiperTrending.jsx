@@ -49,20 +49,24 @@ const SwiperTrending = ({ title, isShow, countsSlides }) => {
         </div>
         <Swiper
           loop={true}
-          spaceBetween={30}
+          spaceBetween={16}
           ref={swiperRef}
           className="mySwiper"
           slidesPerView={1.5}
           breakpoints={{
-            530: {
+            660: {
               slidesPerView: 2.5,
-              spaceBetween: 20,
+              spaceBetween: 16,
             },
             900: {
-              slidesPerView: 3.5,
-              spaceBetween: 20,
+              slidesPerView: 3,
+              spaceBetween: 16,
             },
             1200: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1440: {
               slidesPerView: countsSlides,
               spaceBetween: 30,
             },

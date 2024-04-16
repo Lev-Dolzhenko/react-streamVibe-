@@ -4,20 +4,21 @@
   border-radius: 12px;
   background: $colorBlack-10;
 
-  padding: 20px;
+  padding: clamp(12px, 0.089rem + 1.29vw, 20px);
 
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: clamp(12px, 0.089rem + 1.29vw, 20px);
 }
 
 .must__image {
-  height: 400px;
+  height: clamp(235px, 1.048rem + 26.61vw, 400px);
 
   img {
     object-fit: cover;
     height: 100%;
     border-radius: 12px;
+    width: 100%;
   }
 }
 

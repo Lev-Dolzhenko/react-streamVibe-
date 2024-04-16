@@ -17,9 +17,12 @@ const MoviesShowsPage = () => {
   return (
     <>
       <Header isHero={false} />
-      <SwiperBig />
+      {/* <SwiperBig /> */}
       <div className="container">
         <div className="wrapper__movies">
+          <div className="wrapper__movies_title">
+            <h3 className="title3">Movies</h3>
+          </div>
           <SwiperGenres title={"Our Genres"} />
           <SwiperTopGenres />
           <SwiperTrending countsSlides={5} title={"Trending Now"} />
@@ -27,6 +30,9 @@ const MoviesShowsPage = () => {
           <SwiperMust />
         </div>
         <div className="wrapper__shows">
+          <div className="wrapper__shows_title">
+            <h3 className="title3">Shows</h3>
+          </div>
           <SwiperGenres title={"Our Genres"} />
           <SwiperTopGenres />
           <SwiperTrending
@@ -34,7 +40,11 @@ const MoviesShowsPage = () => {
             isShow={true}
             title={"Trending Shows Now"}
           />
-          <SwiperReleases countsSlides={4} title={"New Released Shows"} isShow={true}/>
+          <SwiperReleases
+            countsSlides={4}
+            title={"New Released Shows"}
+            isShow={true}
+          />
           <SwiperMust />
         </div>
       </div>

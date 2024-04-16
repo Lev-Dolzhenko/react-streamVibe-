@@ -3,5 +3,5 @@
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 50px;
+  margin-bottom: clamp(20px, -1.23rem + 4.84vw, 50px);
 }

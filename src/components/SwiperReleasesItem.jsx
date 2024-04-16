@@ -23,11 +23,11 @@ const SwiperReleasesItem = ({
       >
         {isShow ? (
           <>
-            <div className="releases__wrapper_shows">
+            <div className="releases__wrapper_shows releases__wrapper_shows-show">
               <img src={durationIcon} alt="duration Icon" />
               <span>{duration}</span>
             </div>
-            <div className="releases__wrapper_shows">
+            <div className="releases__wrapper_shows releases__wrapper_shows-show">
               <img src={seasonsIcon} alt="seasons Icon" />
               <span>{seasons} season</span>
             </div>

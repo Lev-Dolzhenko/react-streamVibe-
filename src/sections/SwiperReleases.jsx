@@ -53,16 +53,34 @@ const SwiperReleases = ({title, isShow, countsSlides}) => {
           ref={swiperRef}
           className="mySwiper"
           slidesPerView={1.5}
+          // breakpoints={{
+          //   530: {
+          //     slidesPerView: 2.5,
+          //     spaceBetween: 20,
+          //   },
+          //   900: {
+          //     slidesPerView: 3.5,
+          //     spaceBetween: 20,
+          //   },
+          //   1200: {
+          //     slidesPerView: countsSlides,
+          //     spaceBetween: 30,
+          //   },
+          // }}
           breakpoints={{
-            530: {
+            660: {
               slidesPerView: 2.5,
               spaceBetween: 20,
             },
             900: {
-              slidesPerView: 3.5,
+              slidesPerView: 3,
               spaceBetween: 20,
             },
             1200: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1440: {
               slidesPerView: countsSlides,
               spaceBetween: 30,
             },
