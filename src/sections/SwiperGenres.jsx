@@ -14,28 +14,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-//axios
-import axios from "axios";
+
 
 const SwiperGenres = ({ title, subtitle }) => {
-  const [films, setFilms] = useState();
-  const [filmsPosters, setFilmsPosters] = useState([]);
 
-  const url = "https://api.kinopoisk.dev/v1.4/movie?page=1&limit=20";
-  const headers = {
-    "X-API-KEY": "0G4PNZN-WQQ42Q4-NY9G8M7-9P4KZP1",
-  };
-
-  useEffect(() => {
-    axios
-      .get(url, { headers })
-      .then((response) => {
-        setFilms(response.data.docs);
-      })
-      .catch((error) => {
-        console.error("Ошибка при загрузке данных:", error.response?.data);
-      });
-  }, [url]);
 
   const swiperRef = useRef(null);
 
@@ -51,29 +33,6 @@ const SwiperGenres = ({ title, subtitle }) => {
     }
   };
 
-  const definitelyGenre = (genre) => {
-    for (let film of films) {
-      const genresArr = [];
-
-      const filmGenres = film.genres;
-
-      for (let filmGenre of filmGenres) {
-        genresArr.push(filmGenre.name);
-      }
-      const currGenre = film.genres[0].name;
-
-      genresArr.find((defGenre) => {
-        if (defGenre === genre) {
-          setFilmsPosters((prevPosters) => [...prevPosters, film.poster[0]])
-        };
-      });
-    }
-    console.log(FilmsPosters)
-  };
-
-  useEffect(() => {
-    // definitelyGenre("комедия");
-  }, []);
 
   return (
     <section className="genres genres_movies">
@@ -133,6 +92,7 @@ const SwiperGenres = ({ title, subtitle }) => {
             <SwiperGenresItem
               genre={"Action"}
               images={[tempImage, tempImage, tempImage, tempImage]}
+              filmGenre = 'комедия'
             />
           </SwiperSlide>
           <SwiperSlide>
